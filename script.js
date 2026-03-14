@@ -1,63 +1,63 @@
 let questions=[
 
 {
-question:"1. What is the probability that both coins are heads?",
-answers:["1/2","1/3","1/4","1/6"],
-correct:2
-},
-
-{
-question:"2. What is the probability of rolling an even number on a die?",
-answers:["1/6","1/2","2/3","3/4"],
-correct:1
-},
-
-{
-question:"3. What is the probability of drawing a heart from 52 cards?",
-answers:["1/2","1/4","1/13","1/3"],
-correct:1
-},
-
-{
-question:"4. Two dice rolled. Probability sum is 7?",
-answers:["1/6","1/12","1/8","1/4"],
+question:"1. A bag has 5 red and 5 blue balls. What is the probability of picking a red ball?",
+answers:["1/2","1/5","2/5","3/5"],
 correct:0
 },
 
 {
-question:"5. Bag has 4 red, 3 blue, 3 green. Probability of blue?",
-answers:["3/10","1/2","1/5","2/5"],
+question:"2. A coin is flipped once. What is the probability of getting tails?",
+answers:["1/2","1/3","1/4","1"],
 correct:0
 },
 
 {
-question:"6. All cats are mammals. Milo is a cat. What is true?",
-answers:["Milo is reptile","Milo is mammal","Milo is bird","Milo is fish"],
+question:"3. A die is rolled. What is the probability of getting a number greater than 4?",
+answers:["1/6","1/3","1/2","2/3"],
 correct:1
 },
 
 {
-question:"7. All students study. Lia is a student. What is true?",
-answers:["Lia studies","Lia teaches","Lia sleeps","Lia travels"],
+question:"4. A card is drawn from a 52-card deck. What is the probability of getting a king?",
+answers:["1/52","1/13","1/4","1/26"],
+correct:1
+},
+
+{
+question:"5. A bag has 2 green, 3 blue, and 5 red balls. What is the probability of picking a green ball?",
+answers:["1/10","1/5","2/5","1/2"],
+correct:1
+},
+
+{
+question:"6. All birds can fly. Tweety is a bird. What is logically true?",
+answers:["Tweety can swim","Tweety can fly","Tweety is a fish","Tweety is a reptile"],
+correct:1
+},
+
+{
+question:"7. All dogs are animals. Max is a dog. What can we conclude?",
+answers:["Max is an animal","Max is a cat","Max is a bird","Max is a plant"],
 correct:0
 },
 
 {
-question:"8. All teachers work at school. Mark is teacher. What is true?",
-answers:["Hospital","School","Bank","Store"],
+question:"8. All teachers teach students. Anna is a teacher. What is true?",
+answers:["Anna teaches students","Anna is a student","Anna is a driver","Anna is a doctor"],
+correct:0
+},
+
+{
+question:"9. If it rains, the ground becomes wet. It is raining. What is true?",
+answers:["Ground is dry","Ground is wet","No clouds","Sun is shining"],
 correct:1
 },
 
 {
-question:"9. All even numbers divisible by 2. 8 is even. What is true?",
-answers:["Divisible by 3","Divisible by 5","Divisible by 2","Divisible by 7"],
-correct:2
-},
-
-{
-question:"10. Alex, Bea, Carl jobs: Doctor, Chef, Pilot. Who is Doctor?",
-answers:["Alex","Bea","Carl","None"],
-correct:2
+question:"10. All programmers use computers. Leo is a programmer. What is true?",
+answers:["Leo uses computer","Leo is a pilot","Leo is a farmer","Leo is a driver"],
+correct:0
 }
 
 ];
@@ -144,8 +144,6 @@ showResult();
 
 }
 
-/* RESULT SYSTEM */
-
 function showResult(){
 
 document.getElementById("quizScreen").classList.add("hidden");
@@ -173,8 +171,6 @@ loadScoreboard();
 
 }
 
-/* SAVE SCORE */
-
 function saveScore(percent){
 
 let name=document.getElementById("playerName").value;
@@ -189,8 +185,6 @@ percent:percent
 localStorage.setItem("scores",JSON.stringify(scores));
 
 }
-
-/* LOAD SCOREBOARD */
 
 function loadScoreboard(){
 
@@ -215,8 +209,6 @@ board.appendChild(row);
 });
 
 }
-
-/* RETRY GAME */
 
 function retryGame(){
 
