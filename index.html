@@ -8,9 +8,7 @@
 
 <body>
 
-<!-- SKY BACKGROUND -->
 <div class="sky3d">
-
 <div class="sun"></div>
 
 <div class="cloud layer1" style="top:120px"></div>
@@ -24,27 +22,20 @@
 
 <div class="bird bird1">🐦</div>
 <div class="bird bird2">🐦</div>
-
 </div>
 
 <h1 class="title">Mind Logic</h1>
 
-<!-- START SCREEN -->
+<!-- START -->
 <div id="startScreen" class="card">
-
 <h2>🧠 Mind Logic</h2>
-
 <p>Enter Your Name</p>
-
 <input id="playerName" placeholder="Your name">
-
 <button onclick="startGame()">Start Game</button>
-
 </div>
 
 <!-- DESCRIPTION -->
 <div id="descScreen" class="hidden descPage">
-
 <h1 class="descTitle">Description</h1>
 
 <p class="descText">
@@ -60,23 +51,15 @@ You must reach <b>70%</b> score to pass the challenge.
 </p>
 
 <button onclick="startLevel1()">Play</button>
-
 </div>
 
-<!-- QUIZ -->
+<!-- QUIZ (HIDDEN SA START) -->
 <div id="quizScreen" class="hidden gameUI">
 
-<!-- TOP BOX -->
 <div class="questionBox">
-
 <div class="gameTop">
-
 <span id="progressText">Question 1 / 10</span>
-
-<span class="scoreBar">
-Score: <span id="score">0</span>
-</span>
-
+<span>Score: <span id="score">0</span></span>
 </div>
 
 <h2 id="question"></h2>
@@ -84,27 +67,21 @@ Score: <span id="score">0</span>
 <div class="progressBar">
 <div id="progressFill" class="progressFill"></div>
 </div>
-
 </div>
 
-<!-- BOTTOM BOX -->
 <div class="choicesBox">
-
 <div id="answers" class="answers"></div>
 
-<button id="nextBtn" onclick="nextQuestion()" class="hidden nextBtn">
+<button id="nextBtn" onclick="nextQuestion()" class="hidden">
 Next Question
 </button>
-
 </div>
 
 </div>
 
-<!-- RESULT SCREEN -->
+<!-- RESULT -->
 <div id="resultScreen" class="hidden resultBox">
-
 <h2 id="resultTitle"></h2>
-
 <p id="resultScore"></p>
 
 <button id="retryBtn" onclick="retryGame()" class="hidden">
@@ -116,9 +93,7 @@ Continue
 </button>
 
 <h3>Scoreboard</h3>
-
 <div id="scoreboard"></div>
-
 </div>
 
 <script src="script.js"></script>
