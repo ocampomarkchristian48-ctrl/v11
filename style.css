@@ -88,7 +88,7 @@ position:relative;
 z-index:5;
 }
 
-/* ANSWERS */
+/* ANSWERS GRID */
 .answers{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -243,13 +243,7 @@ position:relative;
 z-index:5;
 }
 
-/* ❌ HIDDEN MUNA YUNG DALAWANG WHITE BOX */
-.questionBox,
-.choicesBox{
-display:none;
-}
-
-/* TOP QUESTION BOX */
+/* QUESTION BOX */
 .questionBox{
 background:white;
 width:700px;
