@@ -66,14 +66,34 @@ let currentQuestion=0;
 let score=0;
 
 function startGame(){
+
+// reset game
+currentQuestion=0;
+score=0;
+document.getElementById("score").innerText=0;
+
+// go to description
 document.getElementById("startScreen").classList.add("hidden");
 document.getElementById("descScreen").classList.remove("hidden");
+
 }
 
 function startLevel1(){
+
+// check name
+let name=document.getElementById("playerName").value.trim();
+
+if(name===""){
+alert("Please enter your name!");
+return;
+}
+
+// go to quiz
 document.getElementById("descScreen").classList.add("hidden");
 document.getElementById("quizScreen").classList.remove("hidden");
+
 showQuestion();
+
 }
 
 function showQuestion(){
@@ -189,15 +209,16 @@ localStorage.setItem("scores",JSON.stringify(scores));
 function loadScoreboard(){
 
 let board=document.getElementById("scoreboard");
-
 board.innerHTML="";
 
 let scores=JSON.parse(localStorage.getItem("scores"))||[];
 
+// latest first
+scores.reverse();
+
 scores.forEach(s=>{
 
 let row=document.createElement("div");
-
 row.className="scoreRow";
 
 row.innerHTML=
@@ -211,7 +232,5 @@ board.appendChild(row);
 }
 
 function retryGame(){
-
 location.reload();
-
 }
